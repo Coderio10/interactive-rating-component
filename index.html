@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+  </style>
+</head>
+<body>
+   <!-- Rating state start -->
+  <section class="sec-1">
+    <img src="./images/icon-star.svg" alt="icon-star">
+    <h1>How did we do?</h1>
+    <p> Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+    <div class="rating">
+      <span id="R1" value="1">1</span>
+      <span id="R2" value="2">2</span>
+      <span id="R3" value="3">3</span>
+      <span id="R4" value="4">4</span>
+      <span id="R5" value="5">5</span>
+    </div>
+    <button id="btn">Submit</button>
+  </section>
+   <!-- Rating state end -->
+  <!-- Thank you state start -->
+  <section class="sec-2" id="">
+    <img src="./images/illustration-thank-you.svg" alt="illustration-thank-you">
+    <p class="result">You selected <b id="rate"> </b>out of 5</p>
+    <h2>Thank you!</h2>
+    <p class="txt">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+    <button id="back"> < back </button>  
+  </section>
+<!-- Thank you state end -->   
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Coderio10">Anointed Kayode</a>.
+  </div>
+</body>
+<script src="./javascript/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    // Hide thank you section
+    $('.sec-2').hide();
+  });
+  // when the rating buttons are clicked
+  $("#R1").click(function(){
+    document.getElementById("rate").innerHTML = " 1 "; 
+  });
+  $("#R2").click(function(){
+    document.getElementById("rate").innerHTML = " 2 "; 
+  });
+  $("#R3").click(function(){
+    document.getElementById("rate").innerHTML = " 3 "; 
+  });
+  $("#R4").click(function(){
+    document.getElementById("rate").innerHTML = " 4 "; 
+  });
+  $("#R5").click(function(){
+    document.getElementById("rate").innerHTML = " 5 "; 
+  });
+  // when submit button is clicked
+  $("#btn").click(function(){
+      $(".sec-2").show();
+      $(".sec-1").hide(); 
+  });
+  // back button
+  $("#back").click(function(){
+    $(".sec-2").hide();
+    $(".sec-1").show();
+  });
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
